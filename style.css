@@ -7,6 +7,16 @@
     flex-wrap: wrap;
 }
 
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#white-btn{
+    font-size: large;
+}
+
 .box{
     border: 1px solid black;
     width: 25%;

@@ -1,6 +1,8 @@
 const main = document.querySelector('.container');
+const whiteBtn = document.querySelector('#white-btn');
 let gridRow = [];
 let box = [];
+let whiteToggle = false;
 
 for(let i=0; i<8; ++i){
     gridRow[i] = document.createElement('div');
@@ -13,10 +15,26 @@ for(let i=0; i<8; ++i){
     main.append(gridRow[i]);
 }
 
+whiteBtn.addEventListener('click',() => {
+    whiteToggle = !whiteToggle;
+    if(whiteToggle){
+        whiteBtn.style.backgroundColor = '#808080';
+    }
+    else{
+        whiteBtn.style.backgroundColor = 'white';
+    }
+})
+
+
 const boxes = document.querySelectorAll('.box');
 
 boxes.forEach((gridBox) => {
     gridBox.addEventListener('mouseover', () => {
-        gridBox.style.backgroundColor = 'black';
+        if(whiteToggle){
+            gridBox.style.backgroundColor = 'white';
+        }
+        else{
+            gridBox.style.backgroundColor = 'black';
+        }
     })
 })
