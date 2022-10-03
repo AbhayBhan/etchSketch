@@ -4,10 +4,10 @@ let gridRow = [];
 let box = [];
 let whiteToggle = false;
 
-for(let i=0; i<8; ++i){
+for(let i=0; i<16; ++i){
     gridRow[i] = document.createElement('div');
     gridRow[i].classList.add('grid-row');
-    for(let j=0; j<8; ++j){
+    for(let j=0; j<16; ++j){
         box[j] = document.createElement('div');
         box[j].classList.add('box');
         gridRow[i].appendChild(box[j]);
